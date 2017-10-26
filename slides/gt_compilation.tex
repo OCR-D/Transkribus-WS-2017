@@ -9,11 +9,10 @@
 
 \usepackage[english]{babel}
 \usepackage[babel]{csquotes}
-\usepackage[autoplay]{animate}
 \usepackage{graphicx}
 \usepackage{numprint}
+\npthousandsep{~}\npthousandthpartsep{,}\npdecimalsign{.}
 \usepackage{enumitem}
-\npthousandsep{~}\npthousandthpartsep{}\npdecimalsign{,}
 
 \DeclareTextSymbol{\textlongs}{TS1}{115} 
 \DeclareTextSymbolDefault{\textlongs}{TS1}
@@ -41,10 +40,10 @@
   \vspace*{7mm}%
   \centerslidestrue%
   \begin{description}
-    \item[Goal:] Compilation of a large, \textbf{homogeneous} Ground Truth data set
+    \item[Goal:] Compilation of a large, \textbf{homogeneous} Ground Truth (GT) data set
     \begin{itemize}\small
       \item Various \textbf{heterogeneous} sources
-      \item Annotation on the \textbf{textual} and \textbf{structural} level
+      \item Annotation on the \textbf{textual} and/or \textbf{structural} level
     \end{itemize}
     \item[Background:] OCR-D initiative
     \begin{enumerate}[label=\alph*.]\small
@@ -68,18 +67,227 @@
 \end{bbawslide}
 
 \begin{bbawslide}{Overview}
-  \vspace*{7mm}%
+  \vspace*{2mm}%
   \centerslidestrue%
+  \begin{center}
+    \epsfig{file=figures/gt_sources.eps,width=0.8\textwidth}
+  \end{center}
+  \begin{tabular}{lr}
+    \begin{minipage}{0.6\textwidth}
+      \begin{itemize}\small
+        \item Various GT sources
+        \item Containing either text or structural annotations in differing quality
+        \item By now, $\approx$ 130 documents with $\approx$ 500 pages
+        \item A lot more to come!
+      \end{itemize}
+    \end{minipage}
+    &
+    \begin{minipage}{0.3\textwidth}\centering
+      \epsfig{file=figures/gt_ocrd.eps,width=\textwidth}
+    \end{minipage}
+  \end{tabular}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{\phantom{Import images}} \\
+      \hline
+      \phantom{Run FineReader for initial layout version} & \phantom{Import \texttt{Page XML}} \\
+      \hline
+      \phantom{Manually correct layout} & \phantom{Run external OCR for initial text version} \\
+      \hline
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \hline
+      & \phantom{Manually correct text} \\
+      \hline
+    \end{tabular}
+  \end{center}
   \begin{itemize}
+    \item
+    \item
+    \item
     \item
   \end{itemize}
 \end{bbawslide}
 
-\begin{bbawslide}{Workflow}
-  \vspace*{7mm}%
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
   \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      \phantom{Run FineReader for initial layout version} & \phantom{Import \texttt{Page XML}} \\
+      \hline
+      \phantom{Manually correct layout} & \phantom{Run external OCR for initial text version} \\
+      \hline
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text region by region}} \\
+      \hline
+      & \phantom{Manually correct text} \\
+      \hline
+    \end{tabular}
+  \end{center}
   \begin{itemize}
     \item
+    \item
+    \item
+    \item
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      Run FineReader for initial layout version & Import \texttt{Page XML} \\
+      \hline
+      \phantom{Manually correct layout} & \phantom{Run external OCR for initial text version} \\
+      \hline
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \hline
+      & \phantom{Manually correct text} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{itemize}
+    \item
+    \item
+    \item
+    \item
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      Run FineReader for initial layout version & Import \texttt{Page XML} \\
+      \hline
+      Manually correct layout & Run external OCR for initial text version \\
+      \hline
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \hline
+      & \phantom{Manually correct text} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{itemize}
+    \item
+    \item
+    \item
+    \item
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      Run FineReader for initial layout version & Import \texttt{Page XML} \\
+      \hline
+      Manually correct layout & Run external OCR for initial text version \\
+      \hline
+      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \hline
+      & \phantom{Manually correct text} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{itemize}
+    \item
+    \item
+    \item
+    \item
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      Run FineReader for initial layout version & Import \texttt{Page XML} \\
+      \hline
+      Manually correct layout & Run external OCR for initial text version \\
+      \hline
+      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \hline
+      & Manually correct text \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{itemize}
+    \item
+    \item
+    \item
+    \item
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{2mm}%
+  \centerslidestrue%
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Existing text}} & \multicolumn{1}{c|}{\textbf{Existing structure}} \\
+      \hline
+      \hline
+      \multicolumn{2}{|c|}{Import images} \\
+      \hline
+      Run FineReader for initial layout version & Import \texttt{Page XML} \\
+      \hline
+      Manually correct layout & Run external OCR for initial text version \\
+      \hline
+      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \hline
+      & Manually correct text \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{itemize}
+    \item Somewhat na\"{i}ve approach
+    \item External Page XML creation or
+    \item Intermediate export and (re-)import as alternative options
+    \item \textbf{Not very comfortable}
   \end{itemize}
 \end{bbawslide}
 
@@ -87,7 +295,36 @@
   \vspace*{7mm}%
   \centerslidestrue%
   \begin{itemize}
-    \item
+    \item \texttt{Transkribus} is a wonderful tool!
+    \begin{itemize}\small
+      \item Support for \textbf{polygonal} regions
+      \item \textbf{Multiple} OCR options
+      \item \textbf{Collaborative} working environment with basic version control
+      \item TEI export
+    \end{itemize}
+    \item For \textbf{GT creation}, we would welcome
+    \begin{itemize}\small
+      \item OCR application on \textbf{specific regions} also for FineReader
+      \item Dedicated \textbf{text import} functionalities (e.g.~on paragraph level)
+      \item METS import which accounts for \textbf{existing structural annotations} and linked ALTO
+      \item \textbf{Automatic support} during manual post correction
+      \item TEI import
+    \end{itemize}
+  \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Collaboration}
+  \vspace*{7mm}%
+  \centerslidestrue%
+  \begin{itemize}
+    \item OCR-D transcription guidelines
+    \begin{itemize}
+      \item
+    \end{itemize}
+    \item Transkribus documentation in DITA format
+    \begin{itemize}
+      \item
+    \end{itemize}
   \end{itemize}
 \end{bbawslide}
 
