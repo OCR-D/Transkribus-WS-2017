@@ -103,7 +103,7 @@
       \hline
       \phantom{Manually correct layout} & \phantom{Run external OCR for initial text version} \\
       \hline
-      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text region by region}} \\
       \hline
       & \phantom{Manually correct text} \\
       \hline
@@ -147,6 +147,16 @@
 \end{bbawslide}
 
 \begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/upload.eps,height=\textheight}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/doc_initial.eps,height=\textheight}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
   \vspace*{2mm}%
   \centerslidestrue%
   \begin{center}
@@ -161,7 +171,7 @@
       \hline
       \phantom{Manually correct layout} & \phantom{Run external OCR for initial text version} \\
       \hline
-      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text region by region}} \\
       \hline
       & \phantom{Manually correct text} \\
       \hline
@@ -173,6 +183,16 @@
     \item
     \item
   \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/doc_abbyy.eps,height=\textheight}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/doc_abbyy2.eps,height=\textheight}
 \end{bbawslide}
 
 \begin{bbawslide}{Workflows}
@@ -190,7 +210,7 @@
       \hline
       Manually correct layout & Run external OCR for initial text version \\
       \hline
-      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text line by line}} \\
+      \multicolumn{2}{|c|}{\bf \phantom{Copy and paste text region by region}} \\
       \hline
       & \phantom{Manually correct text} \\
       \hline
@@ -202,6 +222,11 @@
     \item
     \item
   \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/doc_struct.eps,height=\textheight}
 \end{bbawslide}
 
 \begin{bbawslide}{Workflows}
@@ -219,7 +244,7 @@
       \hline
       Manually correct layout & Run external OCR for initial text version \\
       \hline
-      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \multicolumn{2}{|c|}{\bf Copy and paste text region by region} \\
       \hline
       & \phantom{Manually correct text} \\
       \hline
@@ -231,6 +256,11 @@
     \item
     \item
   \end{itemize}
+\end{bbawslide}
+
+\begin{bbawslide}{Workflows}
+  \vspace*{3mm}%
+  \epsfig{file=figures/doc_text.eps,height=\textheight}
 \end{bbawslide}
 
 \begin{bbawslide}{Workflows}
@@ -248,7 +278,7 @@
       \hline
       Manually correct layout & Run external OCR for initial text version \\
       \hline
-      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \multicolumn{2}{|c|}{\bf Copy and paste text region by region} \\
       \hline
       & Manually correct text \\
       \hline
@@ -277,7 +307,7 @@
       \hline
       Manually correct layout & Run external OCR for initial text version \\
       \hline
-      \multicolumn{2}{|c|}{\bf Copy and paste text line by line} \\
+      \multicolumn{2}{|c|}{\bf Copy and paste text region by region} \\
       \hline
       & Manually correct text \\
       \hline
@@ -317,14 +347,45 @@
   \vspace*{7mm}%
   \centerslidestrue%
   \begin{itemize}
-    \item OCR-D transcription guidelines
-    \begin{itemize}
-      \item
+    \item OCR-D GT Guidelines
+    \begin{itemize}\small
+      \item Documentation of existing OCR-D GT
+      \item Instructions for GT creation
+      \begin{itemize}\small
+        \item Already used within the OCR-D project
+        \item Perspectively also used in a \textbf{broader context} (community use)
+      \end{itemize}
+      \item Automatic \textbf{validation} of GT data
+      \item (Semi-)automatic \textbf{conversion} of existing GT data sets
+			\item Plans for setting up a \textbf{GT repository} for print publications and handwritten documents
     \end{itemize}
-    \item Transkribus documentation in DITA format
-    \begin{itemize}
-      \item
-    \end{itemize}
+    \item Availability
+    \begin{description}\small
+      \item[View:] \url{http://kaskade.dwds.de/~matthias/ocr-d/}
+      \item[Sources:] \url{https://github.com/OCR-D/}
+    \end{description}
+  \end{itemize}
+\end{bbawslide}
+    
+\begin{bbawslide}{Collaboration}
+  \vspace*{7mm}%
+  \centerslidestrue%
+  \begin{itemize}
+    \item Transkribus User Documentation : A proposal
+    \begin{enumerate}[leftmargin=*, align=left, label=\arabic*. Step:]\small
+			\item Change the documentation format from Wiki to DITA
+      \begin{itemize}\small
+        \item XML-based documentation format
+        \item \textbf{Topic-oriented} internal and \enquote{external} structure (i.e.~presentation)
+        \item Various automatically generated \textbf{presentation modes}
+      \end{itemize}
+			\item Build and organize a documentation \textbf{source repository} (e.g. on github)
+      \item Involve the user community into the documentation process
+      \begin{itemize}\small
+        \item Non-developer view point
+        \item Recipes for frequent tasks
+      \end{itemize}
+    \end{enumerate}
   \end{itemize}
 \end{bbawslide}
 
